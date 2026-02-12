@@ -1,7 +1,7 @@
 //importing express and mongoose modules according to ES6 syntax
 import express from 'express';
 import mongoose from 'mongoose';
-import productRoute from './routes/product.route.js';
+import userRoute from './routes/user.route.js';
 
 //importing dotenv to load environment variables from a .env file
 import dotenv from 'dotenv';
@@ -18,8 +18,7 @@ app.use(express.json()); //middleware to parse JSON request bodies (initiallly y
 app.use(express.urlencoded({extended: false})); //middleware to parse forms bodies (initiallly you can't)
 
 //routes
-app.use('/api/products', productRoute)
-
+app.use('/api/users', userRoute)
 
 
 // Get
